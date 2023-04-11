@@ -26,6 +26,69 @@
    <link rel="stylesheet" href="./assets/css/style.min.css">
    <!-- Responsive Css Link -->
    <link rel="stylesheet" href="./assets/css/responsive.css">
+   <style>
+      #test {
+         background-color: black;
+         color: #fff;
+      }
+
+      #test h2 {
+         margin: auto;
+         width: fit-content;
+         position: relative;
+      }
+
+      #test h2:after,
+      #test h2::before {
+         content: '';
+         position: absolute;
+         width: 40px;
+         height: 2px;
+         bottom: 0;
+         background: red;
+      }
+
+      #test h2::after {
+         left: calc(50% - 60px);
+      }
+
+      #test h2::before {
+         right: calc(50% - 60px);
+      }
+
+      #test h2 span {
+         position: absolute;
+         width: 40px;
+         height: 20px;
+         left: calc(50% - 20px);
+         display: inline-block;
+         bottom: -10px;
+      }
+
+      #test h2 span::before,
+      #test h2 span::after {
+         position: absolute;
+         content: "";
+         width: 18px;
+         height: 18px;
+         top: 0;
+         left: 0;
+         border: 2px solid red;
+         border-radius: 50% 50% 0% 50%;
+         -webkit-transform: rotate(-45deg);
+         -ms-transform: rotate(-45deg);
+         transform: rotate(-45deg);
+      }
+
+      #test h2 span::after {
+         left: auto;
+         right: 0px;
+         -webkit-transform: rotate(45deg);
+         -ms-transform: rotate(45deg);
+         transform: rotate(45deg);
+         border-radius: 50% 50% 50% 0%;
+      }
+   </style>
 </head>
 
 <body data-bs-spy="scroll" data-bs-target="#nav_bar" class="position-relative">
@@ -50,7 +113,7 @@
                <h4><span>Hello,</span> I am</h4>
                <h1>Sheik Rayhan</h1>
                <h5> <span class="banner_typed"></span></h5>
-               <a href="#">
+               <a href="./assets/images/aytor.jpg" download>
                   <i class="fa-solid fa-print"></i>
                   Print Resume
                </a>
@@ -62,7 +125,7 @@
 
    <!-- Nav Section Start -->
    <section id="nav_bar">
-      <nav class="nav navbar navbar-expand-lg" >
+      <nav class="nav navbar navbar-expand-lg d-none d-lg-block">
          <div class="container">
             <div class="collapse navbar-collapse" id="mainMenu">
                <ul class="navbar-nav">
@@ -126,8 +189,10 @@
          <div class="row about_info">
             <div class="about_card col-lg-4">
                <div class="inner_div">
-                  <h2>Who am I ?</h2>
-                  <span class="thita"></span>
+                  <h2>
+                     Who am I ?
+                     <span class="thita"></span>
+                  </h2>
                   <div class="whoami">
                      <h6>A Web Designer | Front-End Developer Located In Our Lovely Earth</h6>
                      <p>
@@ -157,8 +222,10 @@
 
             <div class="about_card col-lg-4">
                <div class="inner_div">
-                  <h2>Personal Info</h2>
-                  <span class="thita"></span>
+                  <h2>
+                     Personal Info
+                     <span class="thita"></span>
+                  </h2>
                   <ul class="contact_info">
                      <li><span>Birthdate :</span> 15/09/1999</li>
                      <li>
@@ -198,8 +265,10 @@
 
             <div class="about_card col-lg-4">
                <div class="inner_div">
-                  <h2>My Expertise</h2>
-                  <span class="thita"></span>
+                  <h2>
+                     My Expertise
+                     <span class="thita"></span>
+                  </h2>
                   <div class="exprtise_info d-flex flex-wrap align-items-center">
                      <div><i class="fa-solid fa-laptop-code"></i></div>
                      <div class="info">
@@ -245,8 +314,10 @@
          <div class="row mt-lg-5">
             <div class="col-lg-6 expertise">
                <div class="expertise_info">
-                  <h4 class="text-center">Expertise</h4>
-                  <span class="thita"></span>
+                  <h4 class="text-center">
+                     Expertise
+                     <span class="thita"></span>
+                  </h4>
                   <div class="rsm_card">
                      <h5>Web Design</h5>
                      <h6>Lorem ipsum dolor sit</h6>
@@ -470,7 +541,7 @@
                      minima? Ducimus,
                      neque quia debitis perspiciatis doloribus, eligendi qui magnam praesentium expedita repudiandae
                      autem nesciunt
-                     fugit! Facere, temporibus  </p>
+                     fugit! Facere, temporibus </p>
                </div>
             </div>
             <div class="col-lg-4 service_card">
@@ -1093,6 +1164,13 @@
       </button>
    </section>
    <!-- Back to Top Section End -->
+
+   <!-- <section id="test">
+      <h2>
+         Hello World
+         <span></span>
+      </h2>
+   </section> -->
 
    <!-- Whatsapp icon Section Start -->
    <section id="Whatsapp">

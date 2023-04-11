@@ -14,19 +14,19 @@
             letter-spacing: 2px;
             position: relative;
             &::after{
-                @include lineAfter(470px, 43px);
+                @include lineAfter;
             }
             &::before{
-                @include lineBefore(531px, 43px);
+                @include lineBefore;
             }
         }
         .thita{
             position: relative;
             &::after{
-                @include thitaAfter(500px, 25px);
+                @include thitaAfter;
             }
             &::before{
-                @include thitaBefore(518px, 25px);
+                @include thitaBefore;
             }
         }
         .wp_info{

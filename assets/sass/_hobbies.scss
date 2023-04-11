@@ -16,19 +16,19 @@
             margin-bottom: 30px;
             position: relative;
             &::after{
-                @include lineAfter(490px, 40px);
+                @include lineAfter;
             }
             &::before{
-                @include lineBefore(552px, 40px);
+                @include lineBefore;
             }
         }
         .thita{
             position: relative;
             &::after{
-                @include thitaAfter(520px, -7px);
+                @include thitaAfter;
             }
             &::before{
-                @include thitaBefore(538px, -7px);
+                @include thitaBefore;
             }
         }
         .hobbi_innerdiv{

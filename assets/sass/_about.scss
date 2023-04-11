@@ -19,19 +19,24 @@
                     margin-bottom: 40px;
                     position: relative;
                     &::after{
-                        @include lineAfter(0px, 50px);
+                        @include lineAfter;
                     }
                     &::before{
-                        @include lineBefore(61px, 50px);
+                        @include lineBefore;
                     }
-                }
-                .thita{
-                    position: absolute;
-                    &::after{
-                        @include thitaAfter(30px, -30px);
-                    }
-                    &::before{
-                        @include thitaBefore(47px, -30px);
+                    .thita{
+                        position: absolute;
+                        width: 40px;
+                        height: 20px;
+                        left: calc(50% - 20px);
+                        display: inline-block;
+                        bottom: -10px;
+                        &::after{
+                            @include thitaAfter;
+                        }
+                        &::before{
+                            @include thitaBefore;
+                        }
                     }
                 }
                 .whoami{

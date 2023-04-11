@@ -1,45 +1,44 @@
-@mixin lineAfter($left:0px, $top:40px){
+@mixin lineAfter{
     position: absolute;
     content: '';
     height: 2px;
     width: 30px;
     background-color: $secondaryColor;
-    left: $left;
-    top: $top;
+    bottom: -13px;
+    left: calc(50% - 60px);
 }
 
-@mixin lineBefore($left:60px, $top:40px){
+@mixin lineBefore{
     position: absolute;
     content: '';
     height: 2px;
     width: 30px;
     background-color: $secondaryColor;
-    left: $left;
-    top: $top;
+    bottom: -13px;
 }
 
-@mixin thitaAfter($left:30px, $top:-30px){
+@mixin thitaAfter{
     position: absolute;
-    content: '';
-    height: 14px;
-    width: 14px;
-    left: $left;
-    top: $top;
-    border: 2px solid $secondaryColor;
-    border-radius: 50% 50% 0% 50%;
-    transform: rotate(-45deg);
-}
-
-@mixin thitaBefore($left: 47px, $top: -30px){
-    position: absolute;
-    content: '';
-    height: 14px;
-    width: 14px;
-    left: $left;
-    top: $top;
+    content: "";
+    width: 18px;
+    height: 18px;
+    right: 0px;
+    left: auto;
     border: 2px solid $secondaryColor;
     border-radius: 50% 50% 50% 0%;
     transform: rotate(45deg);
+}
+
+@mixin thitaBefore{
+    position: absolute;
+    content: "";
+    width: 18px;
+    height: 18px;
+    top: 0;
+    left: 0;
+    border: 2px solid $secondaryColor;
+    border-radius: 50% 50% 0% 50%;
+    transform: rotate(-45deg);
 }
 
 @mixin roundDot($top:-80px, $left:-312px){
@@ -100,19 +99,19 @@
         margin-bottom: 50px;
         position: relative;
         &::after{
-            @include lineAfter(170px, 45px);
+            @include lineAfter;
         }
         &::before{
-            @include lineBefore(230px, 45px);
+            @include lineBefore;
         }
     }
     .thita{
         position: absolute;
         &::after{
-            @include thitaAfter(200px, -41px);
+            @include thitaAfter;
         }
         &::before{
-            @include thitaBefore(216px, -41px);
+            @include thitaBefore;
         }
     }
     .rsm_card{
@@ -401,10 +400,10 @@
     padding-bottom: 5px;
     position: relative;
     &::after {
-        @include lineAfter(25px, 40px);
+        @include lineAfter;
     }
     &::before{
-        @include lineBefore(86px, 40px)
+        @include lineBefore
     }
 }
 

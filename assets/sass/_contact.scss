@@ -21,10 +21,10 @@
                 display: inline-block;
                 height:15px;
                 &::after{
-                    @include thitaAfter(55px, 0px);
+                    @include thitaAfter;
                 }
                 &::before{
-                    @include thitaBefore(73px, 0px);
+                    @include thitaBefore;
                 }
             }
             form{
@@ -89,10 +89,10 @@
             .thita {
                 position: relative;
                 &::after {
-                    @include thitaAfter(55px, 0px);
+                    @include thitaAfter;
                 }
                 &::before {
-                    @include thitaBefore(73px, 0px);
+                    @include thitaBefore;
                 }
             }
             .phone{

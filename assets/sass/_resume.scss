@@ -37,19 +37,24 @@
                 margin-bottom: 50px;
                 position: relative;
                 &::after{
-                    @include lineAfter(475px, 50px);
+                    @include lineAfter;
                 }
                 &::before{
-                    @include lineBefore(534px, 50px);
+                    @include lineBefore;
                 }
-            }
-            .thita{
-                position: relative;
-                &::after{
-                    @include thitaAfter(505px, -21px);
-                }
-                &::before{
-                    @include thitaBefore(522px, -21px);
+                .thita {
+                    position: absolute;
+                    width: 40px;
+                    height: 20px;
+                    left: calc(50% - 20px);
+                    display: inline-block;
+                    bottom: -10px;
+                    &::after {
+                        @include thitaAfter;
+                    }
+                    &::before {
+                        @include thitaBefore;
+                    }
                 }
             }
             .skill_progress{
